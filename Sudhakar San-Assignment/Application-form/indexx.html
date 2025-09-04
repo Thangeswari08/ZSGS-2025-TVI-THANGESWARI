@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Job Application Form</h1>
+    <form id="jobForm">
+      
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h2>Personal Information</h2>
+        <label>Full Name<span style="color:red" >*</span></label>
+        <input type="text" name="fullName" required>
+
+        <label>Email<span style="color:red" >*</span></label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number<span style="color:red" >*</span></label>
+        <input type="tel" name="phone" required>
+
+        <label>Address<span style="color:red" >*</span></label>
+        <textarea rows="3" name="address" required></textarea>
+      </div>
+
+      <!-- Education -->
+      <div class="form-section">
+        <h2>Education</h2>
+        <label>Highest Qualification<span style="color:red" >*</span></label>
+        <input type="text" name="qualification" required>
+
+        <label>University / College<span style="color:red" >*</span></label>
+        <input type="text" name="university" required>
+
+        <label>Year of Passing<span style="color:red" >*</span></label>
+        <input type="number" name="yearOfPassing" required>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="form-section">
+        <h2>Work Experience</h2>
+        <label>Company Name<span style="color:red" >*</span></label>
+        <input type="text" name="company">
+
+        <label>Job Title<span style="color:red" >*</span></label>
+        <input type="text" name="jobTitle">
+
+        <label>Years of Experience<span style="color:red" >*</span></label>
+        <input type="number" name="experienceYears">
+      </div>
+
+      <!-- Upload -->
+      <div class="form-section">
+        <h2>Upload</h2>
+        <label>Upload Resume<span style="color:red" >*</span></label>
+        <input type="file" name="resume" required>
+
+        <label>Upload Photo<span style="color:red" >*</span></label>
+        <input type="file" name="photo" accept="image/*">
+      </div>
+
+      <!-- Declaration -->
+      <div class="form-section">
+        <h2>Declaration</h2>
+        <p>
+          I hereby declare that the information provided is true to the best of my knowledge.
+        </p>
+        <label class="declaration-label">
+          <input type="checkbox" name="declaration" required> &nbsp I Agree
+        </label>
+      </div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
