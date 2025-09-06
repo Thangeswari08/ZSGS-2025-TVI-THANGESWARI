@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Layout 5</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #ffcc80;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #e65100;
+      font-weight: bold;
+    }
+
+    .content-area {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      min-height: 400px;
+    }
+
+    aside.left {
+      background-color: #f5f5f5;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    main {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    aside.right {
+      background-color: #f5f5f5;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      .content-area {
+        grid-template-columns: 1fr;
+      }
+      aside.left,
+      aside.right {
+        order: -1; /* sidebars move above content on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Header Section</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="content-area">
+    <aside class="left">Sidebar (Left)</aside>
+
+    <main>
+      <h2>Content Section</h2>
+      <p>Display all your contents here…</p>
+    </main>
+
+    <aside class="right">Sidebar (Right)</aside>
+  </div>
+
+  <footer>Footer Section</footer>
+
+</body>
+</html>
